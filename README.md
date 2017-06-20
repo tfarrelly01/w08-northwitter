@@ -11,7 +11,7 @@
 
 ## Requirements
 
-1. Implement the Home view of Twitter by following the [React Checklist](). We recommend doing the whole process with a single component (Trends would be a good one to start) to get the hang of it.
+1. Implement the Home view of Twitter by following the [React Checklist](https://github.com/northcoders/w08-northwitter/blob/master/CHECKLIST.md). We recommend doing the whole process with a single component (Trends would be a good one to start) to get the hang of it.
 2. Use [Bootstrap](http://getbootstrap.com/) for styling (you may add your own custom styles too). It might be a good idea to do some styling early to position all the components in the page, but most of the styling should be done after the logic is implemented.
 3. The application should fetch data from the provided API.
 4. The app should have 3 main data-driven components:
