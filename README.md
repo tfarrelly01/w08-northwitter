@@ -3,74 +3,74 @@
 
 ## Objectives
 
-1. Introduce yourself to web requests and how we get data from a server. In this exercise we will use GET requests mostly but the API we will be working with has two POST endpoints as well.
-2. Learn how to manipulate web pages based on the data they receive and the way the user interacts with them.
+1. Learn how to integrate HTTP requests and fetched data into your React UI.
+2. Learn about advanced React functionality such as Component lifcycle methods.
 3. Put your functional programming into use as you will need to manipulate the data served up. Our API serves up the data exactly the same as Twitter does.
-4. Build a pixel perfect clone of the Twitter homepage which will be an awesome show piece for your portfolio!
-5. Gain more experience with React and working with real data.
+4. Practice your CSS skills by cloning the Twitter's homepage styling which will be an awesome show piece for your portfolio!
 
-## Instructions
 
-1. Carefully plan the components you will need (remember to 'think in React')
-2. Build static (data-less) components and render them on your page
-3. Use [Bootstrap](http://getbootstrap.com/) to layout your components and give your page a basic structure. Don't spend too much time styling at this point. Bootstrap is already linked in your HTML file.
-4. Populate your profile box with your profile data from the twitter API which has been provided
-5. Populate the trends on your twitter clone by fetching them from the API
-6. Populate the time line with all the tweets
-7. Add each user's avatar to their tweets
-8. Display any images from the tweets
-9. Make any hash tags, mentions or urls open in a new window using the real link
-10. Play with Bootstrap to make your page look as close to Twitter's as you can!
+## Requirements
 
-## Extra Credit
+1. Implement the Home view of Twitter by following the [React Checklist](). We recommend doing the whole process with a single component (Trends would be a good one to start) to get the hang of it.
+2. Use [Bootstrap](http://getbootstrap.com/) for styling (you may add your own custom styles too). It might be a good idea to do some styling early to position all the components in the page, but most of the styling should be done after the logic is implemented.
+3. The application should fetch data from the provided API.
+4. The app should have 3 main data-driven components:
+  1. User Profile
+  2. Trends list
+  3. Tweets timeline
+5. Tweets should feature the users avatar.
 
-1. Make your page send a tweet by posting it to the API's dummy post route
-2. Make your interface add the newly sent tweet to the top of the time line
-3. Test posting the tweet to the API's dummy post-error route and handle the response
-4. Add more pages such as user profile and a modal for direct messaging
+## Advanced Requirements
+- For each tweet render any attached data such as images. Handles (@username) and hashtags (#Hashtag) should be displayed as links and should link to the actual pages on real Twitter. You may use the logic you implemented on the Twitter Data kata from a while ago :)
+- The form form submitting tweets should validate tweets' length and show any characters after 140 in red (copy functionality from Twitter).
+- Make your app send a twee by posting it to the dummy API POST endpoint (it won't go anywhere, but it will reply with a success status code).
+- Make your app respond properly to a failed POST request. A separate dummy endpoint is provided on the API.
+- Add extra functionality such as modals for direct messages.
+- Play with Bootsrap and try to get as close to the real styling as possible.
 
 ## API documentation
+
+Domain: `https://protected-oasis-31937.herokuapp.com`
 
 ### GET routes
 
 #### Status
-<https://protected-oasis-31937.herokuapp.com/>
-Check the status of the application
+`/`
+Responds with the status of the API.
 
 #### Handles
-<https://protected-oasis-31937.herokuapp.com/handles>
-Check which twitter handles are available to get data for
+`/handles`
+Responds with an array of the available handles.
 
 #### Trends
-<https://protected-oasis-31937.herokuapp.com/trends>
-Get twitters current trends
+`/trends`
+Responds with an array of the current trends.
 
 #### Tweets
-<https://protected-oasis-31937.herokuapp.com/tweets>
-Get all tweets for all handles
+`/tweets`
+Responds with tweets for all available handles.
 
 #### Individual handle's tweets
-<https://protected-oasis-31937.herokuapp.com/tweets/northcoders>
-Get tweets for a certain handle. In this case 'northcoders'
+`/tweets/:handle`
+Responds with the tweets for the specified handle.
 
 #### Individual handle's followers
-<https://protected-oasis-31937.herokuapp.com/followers/northcoders>
-Get followers for a certain handle. In this case 'northcoders'
+`/followers/:handle`
+Responds with the followers for the specified handle.
 
 #### Individual handle's following
-<https://protected-oasis-31937.herokuapp.com/following/northcoders>
-Get following for a certain handle. In this case 'northcoders'
+`/following/:handle`
+Responds with the handles the specified handle is following.
 
 ### POST routes
 
 #### Success
-<https://protected-oasis-31937.herokuapp.com/serve-ok>
-Dummy post route which returns a status 200 OK
+`/serve-ok`
+Dummy POST endpoint that responds with a 200 code.
 
 #### Error
-<https://protected-oasis-31937.herokuapp.com/serve-error>
-Dummy post route which returns a status 500 ERROR
-
+`/serve-error`
+Dummy POST endpoint that responds with a 500 code.
 
 ## Resources
 
@@ -78,8 +78,8 @@ Dummy post route which returns a status 500 ERROR
 
 [Difference between GET and POST requests](https://www.youtube.com/watch?v=UObINRj2EGY)
 
-[Superagent Docs](https://visionmedia.github.io/superagent/)
+[Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 
-[React Component Lifecycle](https://facebook.github.io/react/docs/react-component.html)
+[React Component Lifecycle Methods](https://facebook.github.io/react/docs/react-component.html#the-component-lifecycle)
 
 [Collection of Frontend Resources on Wakelet](http://wke.lt/w/s/lH3kv)
