@@ -6,8 +6,29 @@ class App extends React.Component {
     return (
       <div className="component-App">
         <NavBar />
-        <div className='main container-fluid'>
-          {/* Your components go here */}
+        <div className='container-fluid'>
+          <div className='row'>
+            <div className='component-Image'>Image</div>
+          </div>
+        </div>
+        <div className='container-fluid'>
+          <div className='row'>
+            <div className='col-sm-3'>
+
+              <div className='component-ProfileCard'>ProfileCard</div>
+            </div>
+            <div className='col-sm-6'>
+              <div className='component-TweetForm'>TweetForm
+              <div className='TweetList'>TweetList</div>
+                <div className='component-Tweet'>Tweet</div>
+                <div className='component-Tweet'>Tweet</div>
+                <div className='component-Tweet'>Tweet</div>
+              </div>
+            </div>
+            <div className='col-sm-3'>
+              <div className='component-Trends'>Trends</div>
+            </div>
+          </div>
         </div>
       </div>
     );
