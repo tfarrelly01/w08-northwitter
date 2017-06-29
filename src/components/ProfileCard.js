@@ -5,7 +5,10 @@ class ProfileCard extends React.Component {
   render () {
     return (
         <div>
-            <p class="ProfileHeaderCard-bio u-dir" dir="ltr">
+          <img className="logo_image"src="https://pbs.twimg.com/profile_images/668792792689344512/5P90PT8v_400x400.png" alt="northcoders logo" />
+          <h1>northcoders</h1>
+          <h3><a href ="https://twitter.com/northcoders">@northcoders</a></h3>
+            <p className="ProfileHeaderCard">
             The coding bootcamp for the North. Learn 
             to code in 12 weeks. Launch your coding 
             career. May SOLD OUT.

@@ -3,6 +3,7 @@ import NavBar from './NavBar';
 import Image from './Image';
 import ProfileCard from './ProfileCard';
 import './App.css';
+import TweetForm from './TweetForm';
 
 class App extends React.Component {
   render() {
@@ -25,12 +26,12 @@ class App extends React.Component {
               </div>
             </div>
             <div className='col-sm-6'>
-              <div className='component-TweetForm'>TweetForm
+              <div className='component-TweetForm'><TweetForm /></div>
               <div className='component-TweetList'>TweetList</div>
-                <div className='component-Tweet'>Tweet</div>
-                <div className='component-Tweet'>Tweet</div>
-                <div className='component-Tweet'>Tweet</div>
-              </div>
+              <div className='component-Tweet'>Tweet</div>
+              <div className='component-Tweet'>Tweet</div>
+              <div className='component-Tweet'>Tweet</div>
+
             </div>
             <div className='col-sm-3'>
               <div className='component-Trends'>Trends</div>
