@@ -1,5 +1,8 @@
 import React from 'react';
 import NavBar from './NavBar';
+import Image from './Image';
+import ProfileCard from './ProfileCard';
+import './App.css';
 
 class App extends React.Component {
   render() {
@@ -8,18 +11,22 @@ class App extends React.Component {
         <NavBar />
         <div className='container-fluid'>
           <div className='row'>
-            <div className='component-Image'>Image</div>
+            <div className='component-Image'>
+              <Image />
+            </div>
           </div>
         </div>
         <div className='container-fluid'>
           <div className='row'>
             <div className='col-sm-3'>
 
-              <div className='component-ProfileCard'>ProfileCard</div>
+              <div className='component-ProfileCard'>
+                <ProfileCard />
+              </div>
             </div>
             <div className='col-sm-6'>
               <div className='component-TweetForm'>TweetForm
-              <div className='TweetList'>TweetList</div>
+              <div className='component-TweetList'>TweetList</div>
                 <div className='component-Tweet'>Tweet</div>
                 <div className='component-Tweet'>Tweet</div>
                 <div className='component-Tweet'>Tweet</div>
