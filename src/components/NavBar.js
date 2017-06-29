@@ -6,7 +6,7 @@ class NavBar extends React.Component {
   render() {
     return (
       <nav className='component-NavBar navbar navbar-default'>
-        <div className='container-fluid'>
+        <div className='container'>
           <div className="navbar-left">
             <ul className='nav navbar-nav'>
               <li>
