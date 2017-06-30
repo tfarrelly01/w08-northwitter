@@ -6,6 +6,7 @@ class TweetForm extends React.Component {
         return (
             <form>
                 <textarea className="form-control" id="tweet">What's happening?</textarea>
+                <button type="button" className="btn btn-info btn-sm pull-right">Tweet</button>
             </form>
         );
     }

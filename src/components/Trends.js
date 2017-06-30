@@ -1,36 +1,45 @@
 import React from 'react';
-// import request from 'axios'; 
+import request from 'axios';
+
+const API_URL = 'https://northwitter-api-jinwmdmaba.now.sh';
 // import getTrends from './data/getTrends';
 
-// const API_URL = 'https://protected-oasis-31937.herokuapp.com';
-
 class Trends extends React.Component {
-  render () {
-    /*
-    request.get(`${API_URL}/trends`)
-        .then(res => {
-            console.log(res.data);
-        })
-        .catch(console.log);
-    */
+    constructor(props) {
+        super(props);
+        this.state = {
+            trends: []
+        };
+    }
 
-    return (
-        <div className="component-Trends">
-            <div className="panel">
-                <div className="panel-body">
-                    <h3 className="panel-title">
-                        Trends
-                    </h3> 
-                    <Trend title='Something' tweetCount="3.4K Tweets" />
-                    <Trend title='Something' tweetCount="3.4K Tweets" />
-                    <Trend title='Something' tweetCount="3.4K Tweets" />
-                    <Trend title='Something' tweetCount="3.4K Tweets" />
-                    <Trend title='Something' tweetCount="3.4K Tweets" />                
-                </div>     
-            </div> 
-        </div>
-    );
-  }
+    componentDidMount() {
+        request.get(`${API_URL}/trends`)
+            .then((res) => {
+                this.setState({
+                    trends: res.data.trends
+                });
+            })
+            .catch(console.log);
+    }
+    render() {
+
+        return (
+            <div className="component-Trends">
+                <div className="panel">
+                    <div className="panel-body">
+                        <h3 className="panel-title">
+                            Trends
+                    </h3>
+                        <Trend title='Something' tweetCount="3.4K Tweets" />
+                        <Trend title='Something' tweetCount="3.4K Tweets" />
+                        <Trend title='Something' tweetCount="3.4K Tweets" />
+                        <Trend title='Something' tweetCount="3.4K Tweets" />
+                        <Trend title='Something' tweetCount="3.4K Tweets" />
+                    </div>
+                </div>
+            </div>
+        );
+    }
 }
 
 // install axios https://www.npmjs.com/package/axios
