@@ -16,13 +16,13 @@ class App extends React.Component {
         <NavBar />
         <div className='container-fluid'>
           <div className='row'>
-            <div className='col-sm-3'>
+            <div className='col-md-3'>
 
               <div className='component-ProfileCard'>
                 <ProfileCard />
               </div>
             </div>
-            <div className='col-sm-6'>
+            <div className='col-md-6'>
               <div className='component-TweetForm'>
                 <TweetForm />
               </div>
@@ -30,7 +30,7 @@ class App extends React.Component {
                 <TweetList />
               </div>             
             </div>
-            <div className='col-sm-3'>
+            <div className='col-md-3'>
               <div className='component-Trends'>
                 <Trends />
               </div>

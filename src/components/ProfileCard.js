@@ -1,7 +1,25 @@
 import React from 'react';
+import request from 'axios';
+import {flatten} from 'underscore';
+
+const API_URL = 'https://northwitter-api-jinwmdmaba.now.sh';
 import './ProfileCard.css';
 
 class ProfileCard extends React.Component {
+  constructor (props) {
+    super(props);
+        this.state = {
+            tweets: [],
+        };
+  }
+
+  componentDidMount() {
+      request.get(`${API_URL}/tweets`)
+          .then((res) => {
+              const tweets = flatten(res.data.tweets);
+              this.setState({tweets: tweets});
+          });
+  }
   render () {
     return (
         <div className="panel">
