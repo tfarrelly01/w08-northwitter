@@ -1,9 +1,10 @@
 
 import React from 'react';
+import './Image.css';
 
 function Image() {
     return (
-        <img src="https://pbs.twimg.com/media/C6Yit3-WgAEMIdj.jpg" alt="northcoders" />
+        <img className="header-image" src="https://pbs.twimg.com/media/C6Yit3-WgAEMIdj.jpg" alt="northcoders" />
     );
 }
 

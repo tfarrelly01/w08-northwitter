@@ -1,12 +1,14 @@
-h1 {
-    font-size: 2em
-}
-
-h3 {
-    font-size: 1.2em
-}
 
 .logo_image {
-width: 50%;
+width: 100%;
 border-radius: 45%
+}
+
+.prof-text {
+    color: grey;
+}
+
+.prof-num {
+    color: rgb(29, 161, 242);
+    font-weight: bold
 }
